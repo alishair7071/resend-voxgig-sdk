@@ -18,7 +18,7 @@ npm install
 npm run build
 ```
 
-## Authentication and first request
+## Quickstart
 
 Create a key in the [Resend dashboard](https://resend.com/docs/create-an-api-key) and set `RESEND_API_KEY` in your environment. Keep the key out of Git. The generated client uses `apikey` to add `Authorization: Bearer <key>` to requests against `https://api.resend.com`.
 
