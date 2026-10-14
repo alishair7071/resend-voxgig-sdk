@@ -1,0 +1,87 @@
+{
+  "existing": {
+    "inbox": {
+      "INBOX00": {
+        "created_at": "s78",
+        "domain_id": "DOMAIN01",
+        "drafts": 122,
+        "email_address": "s7b",
+        "forwarding": true,
+        "from_name": "s7d",
+        "id": "INBOX00",
+        "last_received": "s7f",
+        "name": "s80",
+        "object": "s81",
+        "receiving_address": "s82",
+        "unread": 131
+      },
+      "INBOX01": {
+        "created_at": "sf0",
+        "domain_id": "DOMAIN01",
+        "drafts": 242,
+        "email_address": "sf3",
+        "forwarding": true,
+        "from_name": "sf5",
+        "id": "INBOX01",
+        "last_received": "sf7",
+        "name": "sf8",
+        "object": "sf9",
+        "receiving_address": "sfa",
+        "unread": 251
+      },
+      "INBOX02": {
+        "created_at": "s168",
+        "domain_id": "DOMAIN01",
+        "drafts": 362,
+        "email_address": "s16b",
+        "forwarding": true,
+        "from_name": "s16d",
+        "id": "INBOX02",
+        "last_received": "s16f",
+        "name": "s170",
+        "object": "s171",
+        "receiving_address": "s172",
+        "unread": 371
+      }
+    }
+  },
+  "new": {
+    "inbox": {
+      "inbox_ref01": {
+        "created_at": "s1e0",
+        "domain_id": "DOMAIN01",
+        "drafts": 482,
+        "email_address": "s1e3",
+        "forwarding": true,
+        "from_name": "s1e5",
+        "last_received": "s1e7",
+        "name": "s1e8",
+        "object": "s1e9",
+        "receiving_address": "s1ea",
+        "unread": 491
+      }
+    }
+  },
+  "requests": {
+    "POST /inboxes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /inboxes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /inboxes/{inbox_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /inboxes/{inbox_id}/agent": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

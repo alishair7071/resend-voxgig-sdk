@@ -1,0 +1,312 @@
+# Entity: update_inbox_draft_response_success
+
+main: kit: entity: update_inbox_draft_response_success: {
+
+  alias: field: {}
+
+  fields: {
+    attachments: {
+      h: "Attachments"
+      n: "attachments"
+      op: {
+        update: {
+          req: false
+          type: [
+            "`$ONE`"
+            [
+              "`$ARRAY`"
+              "`$NULL`"
+            ]
+          ]
+        }
+      }
+      r: true
+      sh: "The files stored on the draft."
+      t: "`$ARRAY`"
+    }
+    bcc: {
+      h: "Bcc"
+      n: "bcc"
+      op: {
+        update: {
+          req: false
+          type: "`$ANY`"
+        }
+      }
+      r: true
+      sh: "The BCC recipients."
+      t: "`$ARRAY`"
+    }
+    cc: {
+      h: "Cc"
+      n: "cc"
+      op: {
+        update: {
+          req: false
+          type: "`$ANY`"
+        }
+      }
+      r: true
+      sh: "The CC recipients."
+      t: "`$ARRAY`"
+    }
+    created_at: {
+      fo: "date-time"
+      h: "Created At"
+      n: "created_at"
+      r: true
+      sh: "Timestamp when the draft was created."
+      t: "`$STRING`"
+    }
+    email_id: {
+      fo: "uuid"
+      h: "Email Id"
+      n: "email_id"
+      r: true
+      sh: "The ID of the outbound email queued when the draft was sent."
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    html: {
+      h: "Html"
+      n: "html"
+      op: {
+        update: {
+          req: false
+          type: [
+            "`$ONE`"
+            [
+              "`$STRING`"
+              "`$NULL`"
+            ]
+          ]
+        }
+      }
+      r: true
+      sh: "The HTML body."
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    id: {
+      fo: "uuid"
+      h: "Id"
+      n: "id"
+      r: true
+      sh: "The ID of the draft."
+      t: "`$STRING`"
+    }
+    object: {
+      h: "Object"
+      n: "object"
+      r: true
+      sh: "The object type."
+      t: "`$STRING`"
+    }
+    reply_to_email_id: {
+      fo: "uuid"
+      h: "Reply To Email Id"
+      n: "reply_to_email_id"
+      r: true
+      sh: "The Email ID the draft replies to."
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    subject: {
+      h: "Subject"
+      n: "subject"
+      op: {
+        update: {
+          req: false
+          type: [
+            "`$ONE`"
+            [
+              "`$STRING`"
+              "`$NULL`"
+            ]
+          ]
+        }
+      }
+      r: true
+      sh: "The subject."
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    text: {
+      h: "Text"
+      n: "text"
+      op: {
+        update: {
+          req: false
+          type: [
+            "`$ONE`"
+            [
+              "`$STRING`"
+              "`$NULL`"
+            ]
+          ]
+        }
+      }
+      r: true
+      sh: "The plain text body."
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    thread_id: {
+      fo: "uuid"
+      h: "Thread Id"
+      n: "thread_id"
+      r: true
+      sh: "The Thread ID when the draft is a reply."
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    to: {
+      h: "To"
+      n: "to"
+      op: {
+        update: {
+          req: false
+          type: "`$ANY`"
+        }
+      }
+      r: true
+      sh: "The recipients."
+      t: [
+        "`$ONE`"
+        [
+          "`$ARRAY`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: true
+      sh: "`reply` when the draft replies to an email in an existing thread."
+      t: "`$STRING`"
+    }
+    updated_at: {
+      fo: "date-time"
+      h: "Updated At"
+      n: "updated_at"
+      r: true
+      sh: "Timestamp when the draft was last saved."
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "update_inbox_draft_response_success"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          bf: [
+            "attachments"
+            "bcc"
+            "cc"
+            "html"
+            "subject"
+            "text"
+            "to"
+          ]
+          co: {
+            id: "PATCH /inboxes/{inbox_id}/drafts/{draft_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "draft_id"
+                or: "draft_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "inbox_id"
+                or: "inbox_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/inboxes/{inbox_id}/drafts/{draft_id}"
+          q: {
+            exist: [
+              "draft_id"
+              "inbox_id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "inboxes"
+            }
+            {
+              var: "inbox_id"
+            }
+            {
+              lit: "drafts"
+            }
+            {
+              var: "draft_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.inbox")]
+  ]
+
+}

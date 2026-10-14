@@ -1,0 +1,92 @@
+{
+  "existing": {
+    "inbox_thread": {
+      "INBOX_THREAD00": {
+        "bcc": [],
+        "cc": [],
+        "folder": "s98",
+        "from": "s99",
+        "has_attachment": true,
+        "has_draft": false,
+        "highlights": {},
+        "id": "INBOX_THREAD00",
+        "labels": [],
+        "matched_email_id": "MATCHED_EMAIL01",
+        "message_count": 160,
+        "read": false,
+        "received_at": "sa2",
+        "subject": "sa3",
+        "to": [],
+        "inbox_id": "INBOX01"
+      },
+      "INBOX_THREAD01": {
+        "bcc": [],
+        "cc": [],
+        "folder": "s12e",
+        "from": "s12f",
+        "has_attachment": true,
+        "has_draft": false,
+        "highlights": {},
+        "id": "INBOX_THREAD01",
+        "labels": [],
+        "matched_email_id": "MATCHED_EMAIL01",
+        "message_count": 310,
+        "read": false,
+        "received_at": "s138",
+        "subject": "s139",
+        "to": [],
+        "inbox_id": "INBOX01"
+      },
+      "INBOX_THREAD02": {
+        "bcc": [],
+        "cc": [],
+        "folder": "s1c4",
+        "from": "s1c5",
+        "has_attachment": true,
+        "has_draft": false,
+        "highlights": {},
+        "id": "INBOX_THREAD02",
+        "labels": [],
+        "matched_email_id": "MATCHED_EMAIL01",
+        "message_count": 460,
+        "read": false,
+        "received_at": "s1ce",
+        "subject": "s1cf",
+        "to": [],
+        "inbox_id": "INBOX01"
+      }
+    }
+  },
+  "new": {
+    "inbox_thread": {
+      "inbox_thread_ref01": {
+        "bcc": [],
+        "cc": [],
+        "folder": "s25a",
+        "from": "s25b",
+        "has_attachment": true,
+        "has_draft": false,
+        "highlights": {},
+        "labels": [],
+        "matched_email_id": "MATCHED_EMAIL01",
+        "message_count": 610,
+        "read": false,
+        "received_at": "s264",
+        "subject": "s265",
+        "to": []
+      }
+    }
+  },
+  "requests": {
+    "GET /inboxes/{inbox_id}/threads": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /inboxes/{inbox_id}/threads/search": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}
